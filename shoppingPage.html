@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="code.js"></script>
+    <title>Webshop</title>
+</head>
+<body>
+  <div class="container">
+    <div class="shopPopup" id="popup-3">
+      <div class="shopOverlay"></div>
+      <div class="shopContent">
+        <div class="close-btn" onclick="toggleShopPopup()">&times;</div>
+        <p style="font-size: 25px;">Shopping cart</p>
+        <div id="listContent">
+        </div>
+      </div>
+    </div>
+    <div class="modelsPopup" id="popup-2">
+      <div class="modelsOverlay"></div>
+      <div class="modelsContent">
+        <a id="models" href="#section1">Mclaren</a>
+        <a id="models" href="#section2">Mclaren</a>
+        <a id="models" href="#section3">Mclaren</a>
+        <a id="models" href="#section4">Mclaren</a>
+      </div>
+    </div>
+    <div class="popup" id="popup-1">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="contentTop">
+          <div class="close-btn" onclick="toggleMenuPopup()">&times;</div>
+        </div>
+        <div class="contentBottom">
+          <a id="navMenuButtons" href="mainPage.html">Vehicles</a>
+          <a id="navMenuButtons" href="shoppingPage.html">Shop items</a>
+          <a id="navMenuButtons" href="purchase.html">Support</a>
+          <a id="navMenuButtons" onclick="toggleShopPopup()">Cart</a>
+        </div>
+      </div>
+    </div>
+    <div class="navBar">
+      <div class="navBarLeft">
+        <a id="navBarButtons" id="modelsNavbar" onclick="toggleModelsPopup()">Models</a>
+      </div>
+      <div class="navBarMiddle">
+        <a href="mainPage.html">
+          <img src="Images/8665089_chess_rook_icon (1).png" alt="logo" id="navLogo">
+        </a>
+      </div>
+      <div class="navBarRight">
+        <a id="navBarButtons" onclick="toggleShopPopup()">Cart</a>
+        <a id="navBarButtons" href="contact.html">Contact</a>
+        <a id="navBarButtons" href="#section2">About</a>
+        <a onclick="toggleMenuPopup()">
+          <img src="Images/134216_menu_lines_hamburger_icon (2).png" alt="menuButton" id="menuButton">
+        </a>
+      </div>
+    </div>
+    <div class="shoppingPage">
+      <div class="shoppingPageContent">
+        <div class="card">
+          <img src="Images/pexels-erik-mclean-4140943.jpg" alt="wheelImage" style="width:150px">
+          <h1>Wheels</h1>
+          <p class="price">$49.99</p>
+          <p>How are you going to drive without wheels?</p>
+          <div>
+            <button id="addAndRemoveButtons" onclick="addProduct('wheels')">+</button>
+            <span id="quantity1">0</span>
+            <button id="addAndRemoveButtons" onclick="removeProduct('wheels')">-</button>
+          </div>
+          <button id="addToCartButtons" onclick="addToList('wheels')">Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="Images/pexels-erik-mclean-4140943.jpg" alt="cleaningKitImage" style="width:150px">
+          <h1>Cleaning kit</h1>
+          <p class="price">$19.99</p>
+          <p>Clean your car with this kit!</p>
+          <div>
+            <button id="addAndRemoveButtons" onclick="addProduct('cleaningKit')">+</button>
+            <span id="quantity2">0</span>
+            <button id="addAndRemoveButtons" onclick="removeProduct('cleaningKit')">-</button>
+          </div>
+          <button id="addToCartButtons" onclick="addToList('cleaningKit')">Add to Cart</button>
+        </div>
+        <div class="card">
+          <img src="Images/pexels-pixabay-162553.jpg" alt="toolsKitImage" style="width:150px">
+          <h1>Tools kit</h1>
+          <p class="price">$19.99</p>
+          <p>Fix your car with this kit!</p>
+          <div>
+            <button id="addAndRemoveButtons" onclick="addProduct('carTools')">+</button>
+            <span id="quantity3">0</span>
+            <button id="addAndRemoveButtons" onclick="removeProduct('carTools')">-</button>
+          </div>
+          <button id="addToCartButtons" onclick="addToList('carTools')">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="code.js"></script>
+</body>
+</html>

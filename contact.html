@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="code.js"></script>
+    <title>Webshop</title>
+</head>
+<body>
+  <div class="container">
+    <div class="modelsPopup" id="popup-2">
+      <div class="modelsOverlay"></div>
+      <div class="modelsContent">
+        <a id="models" href="#section1">Mclaren</a>
+        <a id="models" href="#section2">Mclaren</a>
+        <a id="models" href="#section3">Mclaren</a>
+        <a id="models" href="#section4">Mclaren</a>
+      </div>
+    </div>
+    <div class="popup" id="popup-1">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="contentTop">
+          <div class="close-btn" onclick="toggleMenuPopup()">&times;</div>
+        </div>
+        <div class="contentBottom">
+          <a id="navMenuButtons" href="mainPage.html">Vehicles</a>
+          <a id="navMenuButtons" href="purchase.html">Support</a>
+          <a id="navMenuButtons" href="shoppingPage.html">Shop items</a>
+        </div>
+      </div>
+    </div>
+    <div class="shoppingPage">
+      <div class="navBar">
+        <div class="navBarLeft">
+          <a id="navBarButtons" id="modelsNavbar" onclick="toggleModelsPopup()">Models</a>
+        </div>
+        <div class="navBarMiddle">
+          <a href="mainPage.html">
+            <img src="Images/8665089_chess_rook_icon (1).png" alt="logo" id="navLogo">
+          </a>
+        </div>
+        <div class="navBarRight">
+          <a id="navBarButtons" onclick="toggleShopPopup()">Cart</a>
+          <a id="navBarButtons" href="contact.html">Contact</a>
+          <a id="navBarButtons" href="#section2">About</a>
+          <a onclick="toggleMenuPopup(), fadeOutFunction()">
+            <img src="Images/134216_menu_lines_hamburger_icon (2).png" alt="menuButton" id="menuButton">
+          </a>
+        </div>
+      </div>
+      <div class="contactPageContent">
+        <div class="leftHalf">
+          <h1 class="contactPageHeader">Contact</h1>
+          <p class="contactPageText">Mail: verygoodcars@gmail.com</p>
+          <p class="contactPageHeaders">Sales</p>
+          <p class="contactPageText">Visit our find us page to locate your nearest Mclaren location.</p>
+          <p class="contactPageHeaders">Customer support</p>
+          <p class="contactPageText">Visit our support page to find answers and learn about our products.</p>
+          <p class="contactPageHeaders">Careers</p>
+          <p class="contactPageText">Visit our careers page for a list of current employment opportunities.</p>
+        </div>
+        <div class="rightHalf">
+          <h1 class="contactPageHeader">Social media</h1>
+          <a href="https://www.youtube.com/watch?v=XEjLoHdbVeE">
+            <img src="Images/104501_twitter_bird_icon.png" alt="socialMediaButton" id="socialMediaButtons">
+          </a>
+          <a href="https://www.youtube.com/watch?v=16y1AkoZkmQ">
+            <img src="Images/1161953_instagram_icon.png" alt="socialMediaButton" id="socialMediaButtons">
+          </a>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <img src="Images/5305164_play_video_youtube_youtube logo_icon.png" alt="socialMediaButton" id="socialMediaButtons">
+          </a>
+        </div>
+
+      </div>
+    </div>  
+  </div>
+  <script src="code.js"></script>
+</body>
+</html>

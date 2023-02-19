@@ -1,0 +1,563 @@
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeLeft{
+    from {
+        transform: translate(25%,0%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0%,0%);
+        opacity: 1;
+    }
+}
+@keyframes fadeRight2{
+    from {
+        transform: translate(0%,0%);
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translate(20%,0%);
+    }
+}
+@keyframes fadeRight{
+    from {
+        transform: translate(-25%,0%);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translate(0%,0%);
+    }
+}
+html, body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html{
+    height: 100%;
+}
+body{
+    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    background-color: #222;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    animation: fadeIn 1.5s;
+}
+
+.container{
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+.sections{
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#section1{
+    background-image: url("Images/N1iA0k.webp");
+}
+#section2{
+    background-image: url("Images/ch5uTa.jpg");
+}
+#section3{
+    background-image: url("Images/pexels-supreet-8416941.jpg");
+}
+#section4{
+    background-image: url("Images/pexels-auto-records-10550012.jpg");
+}
+.navBar{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-start !important;
+}
+.navBarLeft{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navBarMiddle{
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navBarRight{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navBarLeft #navBarButtons{
+    margin-left: 25px;
+}
+
+#navBarButtons{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+    cursor: pointer;
+}
+#navLogo{
+    height: 30px;
+    width: 35px;
+    margin-left: 75px;
+}
+#menuButton{
+    height: 30px;
+    width: 30px;
+    margin-right: 30px;
+}
+#menuButton:hover{
+    cursor: pointer;
+}
+
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    scale: 0;
+}
+.popup .content{
+    top: 0px;
+    left: 80%;
+    position: fixed;
+    background: #fff;
+    width: 20%;
+    height: 100vh;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    scale: 0;
+}
+.popup .close-btn{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 20%;
+}
+.popup.active .overlay{
+    scale: 1;
+    display: block;
+}
+
+.popup.active .content{
+    scale: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    animation: fadeLeft 0.8s;
+}
+
+.contentTop{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+.contentBottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+
+
+
+
+.modelsPopup .modelsContent{
+    top: 70px;
+    left: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 15%;
+    height: 10vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    scale: 0;
+}
+.modelsPopup.active .modelsContent{
+    animation: fadeRight 0.5s;
+    scale: 1;
+}
+
+
+#models{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 10px;
+    padding: 12px 20px;
+    margin: 10px;
+    background-color: rgb(32, 32, 32) !important;
+    color: white;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+#navMenuButtons{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+    color: rgb(32, 32, 32) !important;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 12px 20px;
+    transition-duration: 0.5s;
+    margin-top: 10px;
+}
+#navMenuButtons:hover{
+    background-color: #c9c9c9;
+    border-radius: 10px;
+}
+
+
+.viewModelContainer{
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+#modelNames{
+    color: rgb(32, 32, 32);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+}
+#viewModelButtons{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: rgb(32, 32, 32);
+    border-radius: 10px;
+    padding: 6px 12px;
+}
+#section1 #bottomSection1Div{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#arrowDown{
+    height: 18px;
+    width: 27px;
+}
+.bottomNavBarContainer{
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.bottomNavBar{
+    height: 10vh;
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#bottomNavBarButtons{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+.contactPage{
+    height: 100vh;
+    width: 100%;
+}
+.contactPageContent{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contactPageHeader{
+    font-size: 30px;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contactPageText{
+    font-size: 12px;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.contactPageHeaders{
+    font-size: 20px;
+    color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+#socialMediaButtons{
+    height: 50px;
+    width: 50px;
+    margin-top: 50px;
+
+}
+.rightHalf{
+    margin-top: 20vh;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.leftHalf{
+    margin-top: 20vh;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+.shoppingPage{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shoppingPageContent{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin-top: 20px;
+    width: 300px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px 0 black;
+}
+  
+.price{
+    font-size: 22px;
+  }
+
+#addToCartButtons{
+    border: none;
+    outline: 0;
+    padding: 10px;
+    color: black;
+    background-color: #c9c9c9;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 18px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+#addToCartButtons:hover{
+    opacity: 0.85;
+}
+
+.shoppingCartList{
+    width: 350px;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+#listContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+#wheels{
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#cleaningKit{
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#carTools{
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#descriptionText{
+    font-size: 15px;
+    margin-left: 20px;
+}
+#nameText{
+    font-size: 22px;
+    margin-left: 20px;
+    font-weight: 600;
+}
+#addAndRemoveButtons{
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background-color: #c9c9c9;
+    border-radius: 10px;
+}
+#addAndRemoveButtons:hover{
+    cursor: pointer;
+}
+#closeButton{
+    padding: 4px 10px;
+    border: none;
+    background-color: #c9c9c9;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+.shopPopup .shopOverlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    scale: 0;
+}
+.shopPopup .shopContent{
+    top: 0px;
+    left: 60%;
+    position: fixed;
+    background: #fff;
+    width: 40%;
+    height: 100vh;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    scale: 0;
+}
+.shopPopup .close-btn{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 20%;
+}
+.shopPopup.active .shopOverlay{
+    scale: 1;
+    display: block;
+}
+
+.shopPopup.active .shopContent{
+    scale: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    animation: fadeLeft 0.8s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 780px){
+
+}

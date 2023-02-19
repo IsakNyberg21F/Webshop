@@ -1,0 +1,29 @@
+[
+{
+    "product1": {
+        "id": "wheels",
+        "name": "Wheels",
+        "description": "A set of wheels!",
+        "price": "100$",
+        "textId": "nameText",
+        "descriptionId": "descriptionText"
+
+    },
+    "product2": {
+        "id": "cleaningKit",
+        "name": "Car cleaning kit",
+        "description": "Clean your car with this kit!",
+        "price": "200$",
+        "textId": "nameText",
+        "descriptionId": "descriptionText"
+    },
+    "product3": {
+        "id": "carTools",
+        "name": "Car tools",
+        "description": "Fix your car with this kit!",
+        "price": "400$",
+        "textId": "nameText",
+        "descriptionId": "descriptionText"
+    }
+}
+]
