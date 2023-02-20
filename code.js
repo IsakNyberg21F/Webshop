@@ -21,7 +21,15 @@ document.getElementById("popup-2").classList.toggle("active");
 
 
 function addToList(product){
-    console.log(product);
+    const container = document.getElementById('listContent');
+
+    const line = document.createElement('div');
+    line.id = "line";
+
+    line.style.borderTop = "1px solid black";
+
+    container.appendChild(line)
+
     // Create a new div element
     const newDiv = document.createElement('div');
 
@@ -29,7 +37,6 @@ function addToList(product){
     newDiv.id = product;
 
     // Add the new element to the document
-    const container = document.getElementById('listContent');
     container.appendChild(newDiv);
 
     fetch('data.json')
@@ -38,7 +45,6 @@ function addToList(product){
         // Create an img element
         const imgElement = document.createElement("img");
         const textElement = document.createElement("p");
-        const descriptionElement = document.createElement("p");
         if(product === data[0].product1.id){
             // Set the src attribute to the image URL
             imgElement.src = "Images/pexels-erik-mclean-4140943.jpg";
@@ -49,9 +55,6 @@ function addToList(product){
 
             textElement.id = data[0].product1.textId;
             textElement.innerText = data[0].product1.name;
-
-            descriptionElement.id = data[0].product1.descriptionId;
-            descriptionElement.innerText = data[0].product1.description;
         }
         else if(product === data[0].product2.id){
             // Set the src attribute to the image URL
@@ -63,9 +66,6 @@ function addToList(product){
 
             textElement.id = data[0].product2.textId;
             textElement.innerText = data[0].product2.name;
-
-            descriptionElement.id = data[0].product2.descriptionId;
-            descriptionElement.innerText = data[0].product2.description;
         }
         else if(product === data[0].product3.id){
             // Set the src attribute to the image URL
@@ -77,9 +77,6 @@ function addToList(product){
 
             textElement.id = data[0].product3.textId;
             textElement.innerText = data[0].product3.name;
-
-            descriptionElement.id = data[0].product3.descriptionId;
-            descriptionElement.innerText = data[0].product3.description;
         }
         // create a new button element
         const closeButton = document.createElement('button');
@@ -102,12 +99,12 @@ function addToList(product){
             else if(product === data[0].product3.id){
                 document.getElementById(data[0].product3.id).remove();
             }
+            document.getElementById("line").remove();
         });
         // Add the elements to the div
         newDiv.appendChild(closeButton);
         newDiv.appendChild(imgElement);
         newDiv.appendChild(textElement);
-        newDiv.appendChild(descriptionElement);
 
         // create a new span element
         const spanElement = document.createElement('span');
