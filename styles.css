@@ -450,11 +450,11 @@ body{
 }
 #descriptionText{
     font-size: 15px;
-    margin-left: 20px;
+    padding: 20px;
 }
 #nameText{
     font-size: 22px;
-    margin-left: 20px;
+    padding: 20px;
     font-weight: 600;
 }
 #addAndRemoveButtons{
@@ -477,6 +477,7 @@ body{
     font-weight: bold;
     cursor: pointer;
     border-radius: 10px;
+    margin-right: 20px;
 }
 
 
