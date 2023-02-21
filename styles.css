@@ -429,6 +429,7 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 20px;
+    border-top: 2px solid black;
 }
 #wheels{
     height: 100px;
