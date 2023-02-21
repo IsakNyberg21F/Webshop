@@ -154,7 +154,7 @@ function addToList(product){
         console.log(isInCart3);
 
         var amountText = document.createElement("p");
-        amountText.innerText = "Amount:";
+        amountText.innerText = "Amount: ";
         newDiv.appendChild(amountText);
 
         // add the span element to the DOM (e.g., as a child of another element)

@@ -37,7 +37,7 @@
     }
 }
 html, body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:sans-serif;
 }
 html{
     height: 100%;
@@ -110,7 +110,6 @@ body{
 }
 
 #navBarButtons{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 900;
     color: white;
     text-decoration: none;
@@ -120,7 +119,7 @@ body{
 #navLogo{
     height: 30px;
     width: 35px;
-    margin-left: 75px;
+    margin-left: 10px;
 }
 #menuButton{
     height: 30px;
@@ -222,7 +221,6 @@ body{
 
 
 #models{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 800;
     text-decoration: none;
     font-size: 10px;
@@ -240,7 +238,6 @@ body{
 
 
 #navMenuButtons{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 800;
     color: rgb(32, 32, 32) !important;
     text-decoration: none;
@@ -266,12 +263,10 @@ body{
 }
 #modelNames{
     color: rgb(32, 32, 32);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 900;
     font-size: 25px;
 }
 #viewModelButtons{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 900;
     color: white;
     text-decoration: none;
@@ -305,7 +300,6 @@ body{
     align-items: center;
 }
 #bottomNavBarButtons{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: whitesmoke;
     text-decoration: none;
     cursor: pointer;
@@ -325,24 +319,20 @@ body{
 .contactPageHeader{
     font-size: 30px;
     color: whitesmoke;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .contactPageText{
     font-size: 12px;
     color: whitesmoke;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .contactPageHeaders{
     font-size: 20px;
     color: whitesmoke;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 500;
 }
 #socialMediaButtons{
     height: 50px;
     width: 50px;
     margin-top: 50px;
-
 }
 .rightHalf{
     margin-top: 20vh;
@@ -368,6 +358,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .shoppingPageContent{
     width: 100%;
@@ -531,6 +522,17 @@ body{
 }
 
 
+.viewCartDiv{
+    background-color: #222;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.viewCartIcon:hover{
+    cursor: pointer;
+}
 
 
 
