@@ -69,7 +69,7 @@ function addToList(product){
         const textElement = document.createElement("p");
         if(product === data[0].product1.id){
             // Set the src attribute to the image URL
-            imgElement.src = "Images/pexels-erik-mclean-4140943.jpg";
+            imgElement.src = data[0].product1.src;
             // Set the alt and title attributes
             imgElement.alt = "wheelsImage";
             imgElement.title = "wheelsImage";
@@ -80,7 +80,7 @@ function addToList(product){
         }
         else if(product === data[0].product2.id){
             // Set the src attribute to the image URL
-            imgElement.src = "Images/pexels-erik-mclean-4140943.jpg";
+            imgElement.src = data[0].product2.src;
             // Set the alt and title attributes
             imgElement.alt = "cleaningKitImage";
             imgElement.title = "cleaningKitImage";
@@ -91,7 +91,7 @@ function addToList(product){
         }
         else if(product === data[0].product3.id){
             // Set the src attribute to the image URL
-            imgElement.src = "Images/pexels-erik-mclean-4140943.jpg";
+            imgElement.src = data[0].product3.src;
             // Set the alt and title attributes
             imgElement.alt = "toolsImage";
             imgElement.title = "toolsImage";
