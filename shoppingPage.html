@@ -22,10 +22,10 @@
     <div class="modelsPopup" id="popup-2">
       <div class="modelsOverlay"></div>
       <div class="modelsContent">
-        <a id="models" href="#section1">Mclaren</a>
-        <a id="models" href="#section2">Mclaren</a>
-        <a id="models" href="#section3">Mclaren</a>
-        <a id="models" href="#section4">Mclaren</a>
+        <a class="models" href="#section1">Mclaren</a>
+        <a class="models" href="#section2">Mclaren</a>
+        <a class="models" href="#section3">Mclaren</a>
+        <a class="models" href="#section4">Mclaren</a>
       </div>
     </div>
     <div class="popup" id="popup-1">
@@ -35,27 +35,27 @@
           <div class="close-btn" onclick="toggleMenuPopup()">&times;</div>
         </div>
         <div class="contentBottom">
-          <a id="navMenuButtons" href="index.html">Vehicles</a>
-          <a id="navMenuButtons" href="shoppingPage.html">Shop peripherals</a>
-          <a id="navMenuButtons" href="contact.html">Support</a>
-          <a id="navMenuButtons" href="contact.html">Contact</a>
+          <a class="navMenuButtons" href="index.html">Vehicles</a>
+          <a class="navMenuButtons" href="shoppingPage.html">Shop peripherals</a>
+          <a class="navMenuButtons" href="contact.html">Support</a>
+          <a class="navMenuButtons" href="contact.html">Contact</a>
         </div>
       </div>
     </div>
     <div class="navBar">
       <div class="navBarLeft">
-        <a id="navBarButtons" id="modelsNavbar" onclick="toggleModelsPopup()">Models</a>
+        <a class="navBarButtons" onclick="toggleModelsPopup()">Models</a>
       </div>
       <div class="navBarMiddle">
         <a href="index.html">
-          <img src="Images/8665089_chess_rook_icon (1).png" alt="logo" id="navLogo">
+          <img src="Images/8665089_chess_rook_icon(1).png" alt="logo" id="navLogo">
         </a>
       </div>
       <div class="navBarRight">
-        <a id="navBarButtons" href="contact.html">Contact</a>
-        <a id="navBarButtons" href="#section2">About</a>
+        <a class="navBarButtons" href="contact.html">Contact</a>
+        <a class="navBarButtons" href="#section2">About</a>
         <a onclick="toggleMenuPopup()">
-          <img src="Images/134216_menu_lines_hamburger_icon (2).png" alt="menuButton" id="menuButton">
+          <img src="Images/134216_menu_lines_hamburger_icon(2).png" alt="menuButton" id="menuButton">
         </a>
       </div>
     </div>
@@ -67,11 +67,11 @@
           <p class="price">$49.99</p>
           <p>How are you going to drive without wheels?</p>
           <div>
-            <button id="addAndRemoveButtons" onclick="addProduct('wheels')">+</button>
+            <button class="addAndRemoveButtons" onclick="addProduct('wheels')">+</button>
             <span id="quantity1">0</span>
-            <button id="addAndRemoveButtons" onclick="removeProduct('wheels')">-</button>
+            <button class="addAndRemoveButtons" onclick="removeProduct('wheels')">-</button>
           </div>
-          <button id="addToCartButtons" onclick="addToList('wheels')">Add to Cart</button>
+          <button class="addToCartButtons" onclick="addToList('wheels')">Add to Cart</button>
         </div>
         <div class="card">
           <img src="Images/pexels-erik-mclean-4140943.jpg" alt="cleaningKitImage" style="width:150px">
@@ -79,11 +79,11 @@
           <p class="price">$19.99</p>
           <p>Clean your car with this kit!</p>
           <div>
-            <button id="addAndRemoveButtons" onclick="addProduct('cleaningKit')">+</button>
+            <button class="addAndRemoveButtons" onclick="addProduct('cleaningKit')">+</button>
             <span id="quantity2">0</span>
-            <button id="addAndRemoveButtons" onclick="removeProduct('cleaningKit')">-</button>
+            <button class="addAndRemoveButtons" onclick="removeProduct('cleaningKit')">-</button>
           </div>
-          <button id="addToCartButtons" onclick="addToList('cleaningKit')">Add to Cart</button>
+          <button class="addToCartButtons" onclick="addToList('cleaningKit')">Add to Cart</button>
         </div>
         <div class="card">
           <img src="Images/pexels-pixabay-162553.jpg" alt="toolsKitImage" style="width:150px">
@@ -91,16 +91,16 @@
           <p class="price">$19.99</p>
           <p>Fix your car with this kit!</p>
           <div>
-            <button id="addAndRemoveButtons" onclick="addProduct('carTools')">+</button>
+            <button class="addAndRemoveButtons" onclick="addProduct('carTools')">+</button>
             <span id="quantity3">0</span>
-            <button id="addAndRemoveButtons" onclick="removeProduct('carTools')">-</button>
+            <button class="addAndRemoveButtons" onclick="removeProduct('carTools')">-</button>
           </div>
-          <button id="addToCartButtons" onclick="addToList('carTools')">Add to Cart</button>
+          <button class="addToCartButtons" onclick="addToList('carTools')">Add to Cart</button>
         </div>
       </div>
       <div class="viewCartDiv">
         <a class="viewCartIcon" onclick="toggleShopPopup()">
-          <img src="Images/3643737_cart_drop_shop_shopping_trolly_icon (1).png" alt="cartIcon" height="70px" width="70px">
+          <img src="Images/3643737_cart_drop_shop_shopping_trolly_icon(1).png" alt="cartIcon" height="70px" width="70px">
         </a>
       </div>
     </div>

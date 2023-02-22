@@ -107,7 +107,7 @@ function addToList(product){
         closeButton.textContent = 'x';
 
         // set the styles of the button to make it look like a button
-        closeButton.id = "closeButton";
+        closeButton.id = "closeButtons";
 
         // add an event listener to the button to handle the click event
         

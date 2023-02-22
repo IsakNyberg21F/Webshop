@@ -105,11 +105,11 @@ body{
     justify-content: space-evenly;
     align-items: center;
 }
-.navBarLeft #navBarButtons{
+.navBarLeft .navBarButtons{
     margin-left: 25px;
 }
 
-#navBarButtons{
+.navBarButtons{
     font-weight: 900;
     color: white;
     text-decoration: none;
@@ -220,7 +220,7 @@ body{
 }
 
 
-#models{
+.models{
     font-weight: 800;
     text-decoration: none;
     font-size: 10px;
@@ -237,7 +237,7 @@ body{
 
 
 
-#navMenuButtons{
+.navMenuButtons{
     font-weight: 800;
     color: rgb(32, 32, 32) !important;
     text-decoration: none;
@@ -247,7 +247,7 @@ body{
     transition-duration: 0.5s;
     margin-top: 10px;
 }
-#navMenuButtons:hover{
+.navMenuButtons:hover{
     background-color: #c9c9c9;
     border-radius: 10px;
 }
@@ -261,12 +261,12 @@ body{
     justify-content: flex-end;
     align-items: center;
 }
-#modelNames{
+.modelNames{
     color: rgb(32, 32, 32);
     font-weight: 900;
     font-size: 25px;
 }
-#viewModelButtons{
+.viewModelButtons{
     font-weight: 900;
     color: white;
     text-decoration: none;
@@ -299,7 +299,7 @@ body{
     justify-content: space-evenly;
     align-items: center;
 }
-#bottomNavBarButtons{
+.bottomNavBarButtons{
     color: whitesmoke;
     text-decoration: none;
     cursor: pointer;
@@ -329,7 +329,7 @@ body{
     color: whitesmoke;
     font-weight: 500;
 }
-#socialMediaButtons{
+.socialMediaButtons{
     height: 50px;
     width: 50px;
     margin-top: 50px;
@@ -389,9 +389,9 @@ body{
   
 .price{
     font-size: 22px;
-  }
+}
 
-#addToCartButtons{
+.addToCartButtons{
     border: none;
     outline: 0;
     padding: 10px;
@@ -404,7 +404,7 @@ body{
     border-radius: 20px;
     font-weight: 700;
 }
-#addToCartButtons:hover{
+.addToCartButtons:hover{
     opacity: 0.85;
 }
 
@@ -448,7 +448,7 @@ body{
     font-weight: 600;
     padding-right: 20px;
 }
-#addAndRemoveButtons{
+.addAndRemoveButtons{
     font-size: 20px;
     width: 30px;
     height: 30px;
@@ -456,10 +456,10 @@ body{
     background-color: #c9c9c9;
     border-radius: 10px;
 }
-#addAndRemoveButtons:hover{
+.addAndRemoveButtons:hover{
     cursor: pointer;
 }
-#closeButton{
+#closeButtons{
     padding: 4px 10px;
     border: none;
     background-color: #c9c9c9;
