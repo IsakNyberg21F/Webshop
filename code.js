@@ -18,10 +18,22 @@ document.getElementById("popup-2").classList.toggle("active");
 	}
 });
 
-let isInCart1 = false
-let isInCart2 = false
-let isInCart3 = false
+function toggleShopPopup(){
+    document.getElementById("popup-3").classList.toggle("active");
+}
 
+document.addEventListener('keydown', function(event){
+    if(event.key === "Escape" && document.getElementById("popup-3").classList.contains('active')){
+        document.getElementById("popup-3").classList.toggle("active")
+    }
+});
+
+
+let isInCart1 = false;
+let isInCart2 = false;
+let isInCart3 = false;
+
+let totalPrice = 0;
 
 function addToList(product){
     fetch('data.json')
@@ -63,6 +75,17 @@ function addToList(product){
         // Add the new element to the document
         container.appendChild(newDiv);   
         container.appendChild(line) 
+        
+        if(document.getElementById("totalPrice")){
+        document.getElementById("totalPrice").remove();
+        }
+
+        var totalPrice = document.createElement("p");
+        totalPrice.id = "totalPrice";
+
+        let text = "Total price: " + (price1 + price2 + price3) + "$";
+        totalPrice.innerText = text;
+        container.appendChild(totalPrice);
 
         // Create an img element
         const imgElement = document.createElement("img");
@@ -110,7 +133,6 @@ function addToList(product){
         closeButton.id = "closeButtons";
 
         // add an event listener to the button to handle the click event
-        
         closeButton.addEventListener('click', function() {
             // code to close or hide something goes here
             if(product === data[0].product1.id){
@@ -134,31 +156,40 @@ function addToList(product){
 
         // create a new span element
         var spanElement = document.createElement('span');
-        console.log(isInCart3);
+        var price = document.createElement("p");
+        price.id = "prices";
+
         // set the id attribute of the span element
         if(product === data[0].product1.id && isInCart1 === false){
             spanElement.setAttribute('id', 'quantity1');
             spanElement.textContent = quantity1;
             isInCart1 = true;
+            let text = "price: " + price1 + "$";
+            price.innerText = text;
         }
         else if(product === data[0].product2.id && isInCart2 === false){
             spanElement.setAttribute('id', 'quantity2');
             spanElement.textContent = quantity2;
             isInCart2 = true;
+            let text = "price: " + price2 + "$";
+            price.innerText = text;
         }
         else if(product === data[0].product3.id && isInCart3 === false){
             spanElement.setAttribute('id', 'quantity3');
             spanElement.textContent = quantity3;
             isInCart3 = true;
+            let text = "price: " + price3 + "$";
+            price.innerText = text;
         }
-        console.log(isInCart3);
 
         var amountText = document.createElement("p");
         amountText.innerText = "Amount: ";
+
         newDiv.appendChild(amountText);
 
         // add the span element to the DOM (e.g., as a child of another element)
         newDiv.appendChild(spanElement);
+        newDiv.appendChild(price);
         })
         .catch(error => console.error(error));
 		
@@ -167,58 +198,59 @@ let quantity1 = 0;
 let quantity2 = 0;
 let quantity3 = 0;
 
-function addProduct(product) {
-    if(product === "wheels" && isInCart1 === false){
-        quantity1++;
-        document.getElementById("quantity1").innerHTML = quantity1;
+let price1 = 0;
+let price2 = 0;
+let price3 = 0;
 
-    }
-    else if(product === "cleaningKit" && isInCart2 === false){
-        quantity2++;
-        document.getElementById("quantity2").innerHTML = quantity2;
-    }
-    else if(product === "carTools" && isInCart3 === false){
-        quantity3++;
-        document.getElementById("quantity3").innerHTML = quantity3;
-    }
+function addProduct(product) {
+    fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+        if(product === data[0].product1.id && isInCart1 === false){
+            quantity1++;
+            document.getElementById("quantity1").innerHTML = quantity1;
+            price1 += data[0].product1.price;
+        }
+        else if(product === data[0].product2.id && isInCart2 === false){
+            quantity2++;
+            document.getElementById("quantity2").innerHTML = quantity2;
+            price2 += data[0].product2.price;
+        }
+        else if(product === data[0].product3.id && isInCart3 === false){
+            quantity3++;
+            document.getElementById("quantity3").innerHTML = quantity3;
+            price3 += data[0].product3.price;
+        }
+    })
 
 }
 
 function removeProduct(product) {
-    if(product === "wheels" && isInCart1 === false){
+    fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+    if(product === data[0].product1.id && isInCart1 === false){
         if (quantity1 > 0) {
             quantity1--;
             document.getElementById("quantity1").innerHTML = quantity1;
+            price1 -= data[0].product1.price;
         }
     }
-    else if(product === "cleaningKit" && isInCart2 === false){
+    else if(product === data[0].product2.id && isInCart2 === false){
         if (quantity2 > 0) {
             quantity2--;
             document.getElementById("quantity2").innerHTML = quantity2;
+            price2 -= data[0].product2.price;
         }
     }
-    else if(product === "carTools" && isInCart3 === false){
+    else if(product === data[0].product3.id && isInCart3 === false){
         if (quantity3 > 0) {
             quantity3--;
             document.getElementById("quantity3").innerHTML = quantity3;
+            price3 -= data[0].product3.price;
         }
     }
+})
 }
-
-
-/*console.log(
-JSON.parse(productDescriptions)[0].name)*/
-
-
-function toggleShopPopup(){
-        document.getElementById("popup-3").classList.toggle("active");
-    }
-    
-    document.addEventListener('keydown', function(event){
-        if(event.key === "Escape" && document.getElementById("popup-3").classList.contains('active')){
-            document.getElementById("popup-3").classList.toggle("active")
-        }
-});
-
 
 

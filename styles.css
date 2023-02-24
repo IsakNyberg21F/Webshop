@@ -111,10 +111,16 @@ body{
 
 .navBarButtons{
     font-weight: 900;
-    color: white;
+    color: whitesmoke;
     text-decoration: none;
     margin-right: 30px;
     cursor: pointer;
+    padding: 5px 8px;
+    transition-duration: 0.5s;
+    border-radius: 8px;
+}
+.navBarButtons:hover{
+    background-color: black;
 }
 #navLogo{
     height: 30px;
@@ -142,7 +148,7 @@ body{
 }
 .popup .content{
     top: 0px;
-    left: 80%;
+    left: 100%;
     position: fixed;
     background: #fff;
     width: 20%;
@@ -151,7 +157,7 @@ body{
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
-    scale: 0;
+    transition: left 0.5s ease-in-out;
 }
 .popup .close-btn{
     cursor: pointer;
@@ -166,17 +172,16 @@ body{
     border-radius: 20%;
 }
 .popup.active .overlay{
-    scale: 1;
     display: block;
+    scale: 1;
 }
 
 .popup.active .content{
-    scale: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    animation: fadeLeft 0.8s;
+    left: 80%;
 }
 
 .contentTop{
@@ -202,31 +207,29 @@ body{
 
 .modelsPopup .modelsContent{
     top: 70px;
-    left: 100px;
+    left: -25%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     position: fixed;
-    width: 15%;
-    height: 10vh;
+    width: 20%;
+    height: 50px;
     text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    scale: 0;
+    transition: left 0.5s ease-in-out;
 }
 .modelsPopup.active .modelsContent{
-    animation: fadeRight 0.5s;
-    scale: 1;
+    left: 50px;
 }
 
 
 .models{
+    width: 100px;
     font-weight: 800;
     text-decoration: none;
     font-size: 10px;
     padding: 12px 20px;
     margin: 10px;
-    background-color: rgb(32, 32, 32) !important;
+    background-color: #222 !important;
     color: white;
     border-radius: 10px;
 }
@@ -238,8 +241,8 @@ body{
 
 
 .navMenuButtons{
+    color: #222;
     font-weight: 800;
-    color: rgb(32, 32, 32) !important;
     text-decoration: none;
     cursor: pointer;
     font-size: 20px;
@@ -262,18 +265,18 @@ body{
     align-items: center;
 }
 .modelNames{
-    color: rgb(32, 32, 32);
+    color: #222;
     font-weight: 900;
     font-size: 25px;
 }
 .viewModelButtons{
     font-weight: 900;
-    color: white;
+    background-color: #222;
     text-decoration: none;
     cursor: pointer;
-    background-color: rgb(32, 32, 32);
     border-radius: 10px;
-    padding: 6px 12px;
+    padding: 4px 8px;
+    color: white;
 }
 #section1 #bottomSection1Div{
     height: 70vh;
@@ -382,9 +385,10 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    transition-duration: 0.5s;
 }
 .card:hover{
-    box-shadow: 5px 5px 20px 0 black;
+    box-shadow: 0px 0px 40px 5px black;
 }
   
 .price{
@@ -395,7 +399,7 @@ body{
     border: none;
     outline: 0;
     padding: 10px;
-    color: black;
+    color: #222;
     background-color: #c9c9c9;
     text-align: center;
     cursor: pointer;
@@ -403,9 +407,10 @@ body{
     font-size: 18px;
     border-radius: 20px;
     font-weight: 700;
+    transition-duration: 0.5s;
 }
 .addToCartButtons:hover{
-    opacity: 0.85;
+    background-color: rgb(122, 122, 122);
 }
 
 .shoppingCartList{
@@ -420,7 +425,7 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 20px;
-    border-top: 2px solid black;
+    border-top: 2px solid #222;
 }
 #wheels{
     height: 100px;
@@ -455,15 +460,17 @@ body{
     border: 0;
     background-color: #c9c9c9;
     border-radius: 10px;
+    transition-duration: 0.5s;
 }
 .addAndRemoveButtons:hover{
     cursor: pointer;
+    background-color: rgb(122, 122, 122);
 }
 #closeButtons{
     padding: 4px 10px;
     border: none;
     background-color: #c9c9c9;
-    color: black;
+    color: #222;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
@@ -533,12 +540,20 @@ body{
 .viewCartIcon:hover{
     cursor: pointer;
 }
+#prices{
+    padding-left: 20px;
+}
 
 
 
-
-
-
+.aboutPageHeaders{
+    font-size: 25px;
+    color: whitesmoke;
+}
+.aboutPageTexts{
+    font-size: 14px;
+    color: whitesmoke;
+}
 
 
 
