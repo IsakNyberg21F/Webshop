@@ -7,7 +7,8 @@
         "price": 50,
         "textId": "nameText",
         "descriptionId": "descriptionText",
-        "src": "Images/pile-of-tires-on-white-background-royalty-free-image-672151801-1561751929.jpg"
+        "src": "Images/pile-of-tires-on-white-background-royalty-free-image-672151801-1561751929.jpg",
+        "title": "wheelsImage"
     },
     "product2": {
         "id": "cleaningKit",
@@ -16,7 +17,8 @@
         "price": 20,
         "textId": "nameText",
         "descriptionId": "descriptionText",
-        "src": "Images/car-cleaning-kit-21442919.jpg"
+        "src": "Images/car-cleaning-kit-21442919.jpg",
+        "title": "cleaningKitImage"
     },
     "product3": {
         "id": "carTools",
@@ -25,7 +27,8 @@
         "price": 30,
         "textId": "nameText",
         "descriptionId": "descriptionText",
-        "src": "Images/istockphoto-492201907-612x612.jpg"
+        "src": "Images/istockphoto-492201907-612x612.jpg",
+        "title": "toolsImage"
     }
 }
 ]

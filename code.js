@@ -94,8 +94,8 @@ function addToList(product){
             // Set the src attribute to the image URL
             imgElement.src = data[0].product1.src;
             // Set the alt and title attributes
-            imgElement.alt = "wheelsImage";
-            imgElement.title = "wheelsImage";
+            imgElement.alt = data[0].product1.title;
+            imgElement.title = data[0].product1.title;
             imgElement.id = data[0].product1.id;
 
             textElement.id = data[0].product1.textId;
@@ -105,8 +105,8 @@ function addToList(product){
             // Set the src attribute to the image URL
             imgElement.src = data[0].product2.src;
             // Set the alt and title attributes
-            imgElement.alt = "cleaningKitImage";
-            imgElement.title = "cleaningKitImage";
+            imgElement.alt = data[0].product2.title;
+            imgElement.title = data[0].product2.title;
             imgElement.id = data[0].product2.id;
 
             textElement.id = data[0].product2.textId;
@@ -116,8 +116,8 @@ function addToList(product){
             // Set the src attribute to the image URL
             imgElement.src = data[0].product3.src;
             // Set the alt and title attributes
-            imgElement.alt = "toolsImage";
-            imgElement.title = "toolsImage";
+            imgElement.alt = data[0].product3.title;
+            imgElement.title = data[0].product3.title;
             imgElement.id = data[0].product3.id;
 
             textElement.id = data[0].product3.textId;
