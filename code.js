@@ -148,6 +148,10 @@ function addToList(product){
                 isInCart3 = false;
             }
             document.getElementById("line").remove();
+            if(isInCart1 === false && isInCart2 === false && isInCart3 === false){
+                document.getElementById("totalPrice").remove();
+            }
+            
         });
         // Add the elements to the div
         newDiv.appendChild(closeButton);

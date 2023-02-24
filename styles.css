@@ -263,20 +263,12 @@ body{
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    background-color: red;
 }
 .modelNames{
     color: #222;
     font-weight: 900;
     font-size: 25px;
-}
-.viewModelButtons{
-    font-weight: 900;
-    background-color: #222;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 4px 8px;
-    color: white;
 }
 #section1 #bottomSection1Div{
     height: 70vh;
@@ -338,7 +330,7 @@ body{
     margin-top: 50px;
 }
 .rightHalf{
-    margin-top: 20vh;
+    margin-top: 15vh;
     height: 70vh;
     display: flex;
     flex-direction: column;
@@ -346,7 +338,7 @@ body{
     justify-content: flex-start;
 }
 .leftHalf{
-    margin-top: 20vh;
+    margin-top: 15vh;
     height: 70vh;
     display: flex;
     flex-direction: column;
@@ -491,7 +483,7 @@ body{
 }
 .shopPopup .shopContent{
     top: 0px;
-    left: 60%;
+    left: 100%;
     position: fixed;
     background: #fff;
     width: 40%;
@@ -500,7 +492,7 @@ body{
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
-    scale: 0;
+    transition: left 0.5s ease-in-out;
 }
 .shopPopup .close-btn{
     cursor: pointer;
@@ -516,16 +508,14 @@ body{
 }
 .shopPopup.active .shopOverlay{
     scale: 1;
-    display: block;
 }
 
 .shopPopup.active .shopContent{
-    scale: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    animation: fadeLeft 0.8s;
+    left: 60%;
 }
 
 
@@ -553,6 +543,9 @@ body{
 .aboutPageTexts{
     font-size: 14px;
     color: whitesmoke;
+    width: 40vw;
+    height: 10vh;
+    line-height: 20px;
 }
 
 
