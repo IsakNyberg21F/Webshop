@@ -62,7 +62,7 @@ function addToList(product){
         const container = document.getElementById('listContent');
 
         const line = document.createElement('div');
-        line.id = "line";
+        line.id = "line" + product;
     
         line.style.borderBottom = "2px solid black";
     
@@ -126,7 +126,7 @@ function addToList(product){
         // create a new button element
         const closeButton = document.createElement('button');
 
-        // set the text content of the button to "x" or "close"
+        // set the text content of the button to "x"
         closeButton.textContent = 'x';
 
         // set the styles of the button to make it look like a button
@@ -138,16 +138,31 @@ function addToList(product){
             if(product === data[0].product1.id){
                 document.getElementById(data[0].product1.id).remove();
                 isInCart1 = false;
+                price1 = 0;
+                quantity1 = 0;
+                document.getElementById("quantity1").innerHTML = quantity1;
+                document.getElementById("line" + data[0].product1.id).remove();
             }
             else if(product === data[0].product2.id){
                 document.getElementById(data[0].product2.id).remove();
                 isInCart2 = false;
+                price2 = 0;
+                quantity2 = 0;
+                document.getElementById("quantity2").innerHTML = quantity2;
+                document.getElementById("line" + data[0].product2.id).remove();
             }
             else if(product === data[0].product3.id){
                 document.getElementById(data[0].product3.id).remove();
                 isInCart3 = false;
+                price3 = 0;
+                quantity3 = 0;
+                document.getElementById("quantity3").innerHTML = quantity3;
+                document.getElementById("line" + data[0].product3.id).remove();
             }
-            document.getElementById("line").remove();
+
+            text = "Total price: " + (price1 + price2 + price3) + "$";
+            document.getElementById("totalPrice").innerText = text;
+
             if(isInCart1 === false && isInCart2 === false && isInCart3 === false){
                 document.getElementById("totalPrice").remove();
             }
@@ -182,7 +197,7 @@ function addToList(product){
             spanElement.setAttribute('id', 'quantity3');
             spanElement.textContent = quantity3;
             isInCart3 = true;
-            let text = "price: " + price3 + "$";
+            let text = "Price: " + price3 + "$";
             price.innerText = text;
         }
 

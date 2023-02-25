@@ -6,36 +6,18 @@
         opacity: 1;
     }
 }
-@keyframes fadeLeft{
-    from {
-        transform: translate(25%,0%);
-        opacity: 0;
+
+@media only screen and (max-width: 800px){
+    body .container{
+        font-size: 10px;
     }
-    to {
-        transform: translate(0%,0%);
-        opacity: 1;
+    .navBarMiddle{
+        margin-left: 80px;
     }
+
 }
-@keyframes fadeRight2{
-    from {
-        transform: translate(0%,0%);
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-        transform: translate(20%,0%);
-    }
-}
-@keyframes fadeRight{
-    from {
-        transform: translate(-25%,0%);
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-        transform: translate(0%,0%);
-    }
-}
+
+
 html, body{
     font-family:sans-serif;
 }
@@ -85,28 +67,31 @@ body{
     height: 70px;
     position: fixed;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     align-self: flex-start !important;
 }
 .navBarLeft{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    justify-self: flex-start;
 }
 .navBarMiddle{
-    margin-left: 100px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    justify-self: center;
+    margin-left: 150px;
 }
 .navBarRight{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    justify-self: flex-end;
 }
 .navBarLeft .navBarButtons{
-    margin-left: 25px;
+    margin-left: 15px;
 }
 
 .navBarButtons{
@@ -125,7 +110,6 @@ body{
 #navLogo{
     height: 30px;
     width: 35px;
-    margin-left: 10px;
 }
 #menuButton{
     height: 30px;
@@ -148,7 +132,7 @@ body{
 }
 .popup .content{
     top: 0px;
-    left: 100%;
+    left: 110%;
     position: fixed;
     background: #fff;
     width: 20%;
@@ -157,7 +141,7 @@ body{
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
-    transition: left 0.5s ease-in-out;
+    transition: left 0.4s ease-in-out;
 }
 .popup .close-btn{
     cursor: pointer;
@@ -207,7 +191,7 @@ body{
 
 .modelsPopup .modelsContent{
     top: 70px;
-    left: -25%;
+    left: -50%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -218,12 +202,11 @@ body{
     transition: left 0.5s ease-in-out;
 }
 .modelsPopup.active .modelsContent{
-    left: 50px;
+    left: 40px;
 }
 
 
 .models{
-    width: 100px;
     font-weight: 800;
     text-decoration: none;
     font-size: 10px;
@@ -263,7 +246,6 @@ body{
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-color: none;
 }
 .modelNames{
     color: #222;
@@ -534,8 +516,6 @@ body{
     padding-left: 20px;
 }
 
-
-
 .aboutPageHeaders{
     font-size: 25px;
     color: whitesmoke;
@@ -547,28 +527,7 @@ body{
     height: 10vh;
     line-height: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 780px){
-
+#cartIcon{
+    height: 70px;
+    width: 70px;
 }
