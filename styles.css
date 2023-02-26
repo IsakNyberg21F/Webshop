@@ -36,6 +36,7 @@ body{
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 .sections{
     width: 100%;
@@ -99,11 +100,12 @@ body{
 #navLogo{
     height: 30px;
     width: 35px;
+    margin-right: 17px;
 }
 #menuButton{
     height: 30px;
     width: 30px;
-    margin-right: 10px;
+    margin-right: 30px;
 }
 #menuButton:hover{
     cursor: pointer;
@@ -330,8 +332,8 @@ body{
     flex-direction: column;
 }
 .shoppingPageContent{
-    margin-top: 70px;
-    width: 100%;
+    margin-top: 50px;
+    width: 100vw;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -340,8 +342,7 @@ body{
 }
 
 .card{
-    margin-top: 100px;
-    width: 25vw;
+    width: 25%;
     height: 95%;
     margin: auto;
     text-align: center;
@@ -394,21 +395,7 @@ body{
     margin-top: 20px;
     border-top: 2px solid #222;
 }
-#wheels{
-    height: 100px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
-}
-#cleaningKit{
-    height: 100px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
-}
-#carTools{
+#wheels, #cleaningKit, #carTools{
     height: 100px;
     display: flex;
     justify-content: flex-start;
