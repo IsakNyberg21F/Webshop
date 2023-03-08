@@ -74,7 +74,7 @@ function addToList(product){
     
         // Add the new element to the document
         container.appendChild(newDiv);   
-        container.appendChild(line) 
+        container.appendChild(line);
         
         if(document.getElementById("totalPrice")){
         document.getElementById("totalPrice").remove();
