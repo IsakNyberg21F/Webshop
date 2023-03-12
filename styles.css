@@ -488,9 +488,11 @@ body{
     width: 30px;
     height: 30px;
     border: 0;
+    color: black;
     background-color: #c9c9c9;
     border-radius: 10px;
     transition-duration: 0.5s;
+    text-align: center;
 }
 .addAndRemoveButtons:hover{
     cursor: pointer;
