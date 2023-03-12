@@ -8,47 +8,127 @@
 }
 
 @media only screen and (max-width: 768px){
-    body{
-        font-size: 12px;
+    .navBarButtons{
+        font-size: 8px !important;
+    }
+    #contactButtonNav, #aboutButtonNav{
+        display: none;
+    }
+    .popup .content{
+        width: 40vw !important;
+    }
+    .popup.active .content{
+        left: 60vw !important;
+    }
+    .popup .close-btn{
+        width: 15px !important;
+        height: 15px !important;
+        font-size: 12px !important;
+        line-height: 15px !important;
+    }
+    .navMenuButtons{
+        font-size: 10px !important;
+    }
+    #navLogo{
+        height: 18px !important;
+        width: 22px !important;
+    }
+    #menuButton{
+        height: 20px !important;
+        width: 20px !important;
+        margin-right: 10px !important;
+    }
+    .modelNames{
+        font-size: 10px !important;
+    }
+    .contactPageContent{
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+    }
+    .rightHalf{
+        margin-top: 10vh !important;
+        height: auto !important;
+    }
+    .aboutPageTexts{
+        width: 75vw !important;
+    }
+    #cartIcon{
+        height: 20px !important;
+        width: 20px !important;
+        margin-right: 10px !important;
+    }
+    #wheelsImage, #cleaningKitImage, #toolsImage{
+        display: none;
+    }
+    #nameText{
+        font-size: 16px !important;
+        padding-right: 8px !important;
+    }
+    #closeButtons{
+        padding: 3px 7px !important;
+        font-size: 12px !important;
+        border-radius: 8px !important;
+        margin-right: 8px !important;
+    }
+    #prices, #amountText, #quantityNr, #totalPrice{
+        font-size: 15px !important;
     }
 }
-
-
+@media only screen and (max-width: 360px){
+    #nameText{
+        font-size: 11px !important;
+    }
+    #prices, #amountText, #quantityNr, #totalPrice{
+        font-size: 10px !important;
+    }
+}
+@media only screen and (max-height: 700px){
+    #wheels, #cleaningKit, #carTools{
+        height: 80px !important;
+    }
+}
 html, body{
     font-family: sans-serif;
 }
 html{
+    height: 100vh;
 }
 body{
     margin: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
     padding: 0px;
     background-color: #222;
     animation: fadeIn 1.5s;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 .container{
+    height: 100vh;
     width: 100vw;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
     overflow-y: scroll;
-    overflow-x: hidden;
 }
 .sections{
     height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
+    background-position: center;
 }
 #section1{
-    background-image: url("Images/N1iA0k.webp");
+    background-image: url("Images/QbwDLF.webp");
 }
 #section2{
-    background-image: url("Images/ch5uTa.jpg");
+    background-image: url("Images/155-1557450_wallpaper-nissan-gt-r-nissan-front-view-sports.jpg");
 }
 #section3{
-    background-image: url("Images/pexels-supreet-8416941.jpg");
+    background-image: url("Images/gate-nissan-nissan-gt-r-wallpaper-preview.jpg");
 }
 #section4{
-    background-image: url("Images/pexels-auto-records-10550012.jpg");
+    background-image: url("Images/mitsubishi-lancer-car-front-view-1080P-wallpaper-middle-size.jpg");
 }
 .navBar{
     width: 100vw;
@@ -84,6 +164,7 @@ body{
     padding: 5px 8px;
     transition-duration: 0.5s;
     border-radius: 8px;
+    font-size: 14px;
 }
 .navBarButtons:hover{
     background-color: black;
@@ -91,7 +172,6 @@ body{
 #navLogo{
     height: 30px;
     width: 35px;
-    margin-right: 17px;
 }
 #menuButton{
     height: 30px;
@@ -178,20 +258,20 @@ body{
     justify-content: space-evenly;
     align-items: center;
     position: fixed;
-    width: 26%;
+    width: 100px;
     height: 5vh;
     text-align: center;
     transition: left 0.5s ease-in-out;
 }
 .modelsPopup.active .modelsContent{
-    left: 7vw;
+    left: 70px;
 }
 
 
 .models{
     font-weight: 800;
     text-decoration: none;
-    font-size: 70%;
+    font-size: 10px;
     padding: 3% 5%;
     margin: 3%;
     background-color: #222 !important;
@@ -230,7 +310,7 @@ body{
     align-items: center;
 }
 .modelNames{
-    color: #222;
+    color: whitesmoke;
     font-weight: 900;
     font-size: 130%;
 }
@@ -278,6 +358,7 @@ body{
 .contactPageHeader{
     font-size: 30px;
     color: whitesmoke;
+    text-align: center;
 }
 .contactPageText{
     font-size: 12px;
@@ -318,9 +399,7 @@ body{
     height: 100vh;
     width: 100vw;
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 .shoppingPageContent{
     margin-top: 50px;
@@ -333,8 +412,8 @@ body{
 }
 
 .card{
-    width: 25%;
-    height: 95%;
+    width: 300px;
+    height: 500px;
     margin: auto;
     text-align: center;
     font-family: arial;
@@ -345,6 +424,8 @@ body{
     align-items: center;
     justify-content: space-evenly;
     transition-duration: 0.5s;
+    margin-top: 20px;
+    margin: 20px;
 }
 .card:hover{
     box-shadow: 0px 0px 40px 5px black;
@@ -393,6 +474,10 @@ body{
     align-items: center;
     padding: 20px;
 }
+#wheelsImage, #cleaningKitImage, #toolsImage{
+    height: 100px;
+    padding: 20px;
+}
 #nameText{
     font-size: 22px;
     font-weight: 600;
@@ -415,7 +500,7 @@ body{
     padding: 4px 10px;
     border: none;
     background-color: #c9c9c9;
-    color: #222;
+    color: black;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
@@ -439,7 +524,7 @@ body{
     left: 100%;
     position: fixed;
     background: #fff;
-    width: 40%;
+    width: 80%;
     height: 100vh;
     z-index: 2;
     text-align: center;
@@ -468,7 +553,7 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    left: 60%;
+    left: 20%;
 }
 
 
@@ -496,6 +581,7 @@ body{
     line-height: 150%;
 }
 #cartIcon{
-    height: 70px;
-    width: 70px;
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
 }

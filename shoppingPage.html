@@ -42,8 +42,11 @@
       </a>
     </div>
     <div class="navBarRight">
-      <a class="navBarButtons" href="contact.html">Contact</a>
-      <a class="navBarButtons" href="about.html">About</a>
+      <a class="navBarButtons" id="contactButtonNav" href="contact.html">Contact</a>
+      <a class="navBarButtons" id="aboutButtonNav" href="about.html">About</a>
+      <a class="viewCartIcon" onclick="toggleShopPopup()">
+        <img src="Images/3643737_cart_drop_shop_shopping_trolly_icon(1).png" alt="cartIcon" id="cartIcon">
+      </a>
       <a onclick="toggleMenuPopup()">
         <img src="Images/134216_menu_lines_hamburger_icon(2).png" alt="menuButton" id="menuButton">
       </a>
@@ -52,7 +55,7 @@
   <div class="shoppingPage">
     <div class="shoppingPageContent">
       <div class="card">
-        <img src="Images/pile-of-tires-on-white-background-royalty-free-image-672151801-1561751929.jpg" alt="wheelImage" style="width:75%">
+        <img src="Images/pile-of-tires-on-white-background-royalty-free-image-672151801-1561751929.jpg" alt="wheelImage" width="55%" height="auto">
         <h1>Wheels</h1>
         <p class="price">$50</p>
         <p>How are you going to drive without wheels?</p>
@@ -64,7 +67,7 @@
         <button class="addToCartButtons" onclick="addToList('wheels')">Add to Cart</button>
       </div>
       <div class="card">
-        <img src="Images/car-cleaning-kit-21442919.jpg" alt="cleaningKitImage" style="width:60%">
+        <img src="Images/car-cleaning-kit-21442919.jpg" alt="cleaningKitImage" width="45%" height="auto">
         <h1>Cleaning kit</h1>
         <p class="price">$20</p>
         <p>Clean your car with this kit!</p>
@@ -76,7 +79,7 @@
         <button class="addToCartButtons" onclick="addToList('cleaningKit')">Add to Cart</button>
       </div>
       <div class="card">
-        <img src="Images/istockphoto-492201907-612x612.jpg" alt="toolsKitImage" style="width:90%">
+        <img src="Images/istockphoto-492201907-612x612.jpg" alt="toolsKitImage" width="80%" height="auto">
         <h1>Tools kit</h1>
         <p class="price">$30</p>
         <p>Fix your car with this kit!</p>
@@ -87,11 +90,6 @@
         </div>
         <button class="addToCartButtons" onclick="addToList('carTools')">Add to Cart</button>
       </div>
-    </div>
-    <div class="viewCartDiv">
-      <a class="viewCartIcon" onclick="toggleShopPopup()">
-        <img src="Images/3643737_cart_drop_shop_shopping_trolly_icon(1).png" alt="cartIcon" id="cartIcon">
-      </a>
     </div>
   </div>
   <script src="code.js"></script>

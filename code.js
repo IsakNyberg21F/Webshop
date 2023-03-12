@@ -96,7 +96,7 @@ function addToList(product){
             // Set the alt and title attributes
             imgElement.alt = data[0].product1.title;
             imgElement.title = data[0].product1.title;
-            imgElement.id = data[0].product1.id;
+            imgElement.id = data[0].product1.title;
 
             textElement.id = data[0].product1.textId;
             textElement.innerText = data[0].product1.name;
@@ -107,7 +107,7 @@ function addToList(product){
             // Set the alt and title attributes
             imgElement.alt = data[0].product2.title;
             imgElement.title = data[0].product2.title;
-            imgElement.id = data[0].product2.id;
+            imgElement.id = data[0].product2.title;
 
             textElement.id = data[0].product2.textId;
             textElement.innerText = data[0].product2.name;
@@ -118,7 +118,7 @@ function addToList(product){
             // Set the alt and title attributes
             imgElement.alt = data[0].product3.title;
             imgElement.title = data[0].product3.title;
-            imgElement.id = data[0].product3.id;
+            imgElement.id = data[0].product3.title;
 
             textElement.id = data[0].product3.textId;
             textElement.innerText = data[0].product3.name;
@@ -162,6 +162,7 @@ function addToList(product){
 
             text = "Total price: " + (price1 + price2 + price3) + "$";
             document.getElementById("totalPrice").innerText = text;
+            
 
             if(isInCart1 === false && isInCart2 === false && isInCart3 === false){
                 document.getElementById("totalPrice").remove();
@@ -200,9 +201,10 @@ function addToList(product){
             let text = "Price: " + price3 + "$";
             price.innerText = text;
         }
-
+        spanElement.id = "quantityNr";
         var amountText = document.createElement("p");
         amountText.innerText = "Amount: ";
+        amountText.id = "amountText";
 
         newDiv.appendChild(amountText);
 
